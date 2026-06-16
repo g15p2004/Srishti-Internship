@@ -194,5 +194,5 @@ Future improvements to this repository may include:
 
 B.Tech Computer Science and Engineering
 
-Internship Project – Python for Data Analysis and Visualization
+Internship Project – AI ML
 
