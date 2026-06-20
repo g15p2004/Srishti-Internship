@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Purchase Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Customer Purchase Prediction</h1>
+        <p class="subtitle">
+            Predict whether a customer is likely to purchase a product
+            based on Age and Estimated Salary.
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number"
+                       name="age"
+                       placeholder="Enter Age"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Estimated Salary</label>
+                <input type="number"
+                       name="salary"
+                       placeholder="Enter Salary"
+                       required>
+            </div>
+
+            <button type="submit">
+                Predict Purchase
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
